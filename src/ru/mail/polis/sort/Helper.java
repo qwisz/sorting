@@ -24,4 +24,20 @@ public class Helper {
         }
         return a;
     }
+
+    public static int[] genWorstInsertionSort(int n){
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = n - i;
+        }
+        return a;
+    }
+
+    public static int[] genBestInsertionSort(int n){
+        int[] a = new int[n];
+        for (int i = 0; i < n; i++) {
+            a[i] = i + 1;
+        }
+        return a;
+    }
 }
