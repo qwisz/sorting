@@ -5,6 +5,13 @@ package ru.mail.polis.sort;
  */
 public class QuickSort {
 
+//    public static void main(String[] args) {
+//        int[] a = Helper.genWorstQuickSort(11);
+//        for (int i = 0; i < a.length; i++) {
+//            System.out.print(a[i] + " ");
+//        }
+//    }
+
     private static int partition(int[] a, int left, int right) {
         int p = a[left + (right - left + 1) / 2];
         int i = left, j = right;

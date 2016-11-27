@@ -9,16 +9,16 @@ import java.util.List;
  */
 public class BFPRP {
 
-    public static void main(String[] args) {
-        int[] a = {1, 1, 5, 6, 3, 1, -1, 7, 4, 19, 45, 23, 25, 7, 9, 11, 10};
-        System.out.println(select(a, 10));
-        insertSort2(a);
-        for (int i = 0; i < a.length; i++) {
-            System.out.print(a[i] + " ");
-        }
-        System.out.println();
-        System.out.println(a[10]);
-    }
+//    public static void main(String[] args) {
+//        int[] a = {1, 1, 5, 6, 3, 1, -1, 7, 4, 19, 45, 23, 25, 7, 9, 11, 10};
+//        System.out.println(select(a, 10));
+//        insertSort2(a);
+//        for (int i = 0; i < a.length; i++) {
+//            System.out.print(a[i] + " ");
+//        }
+//        System.out.println();
+//        System.out.println(a[10]);
+//    }
 
     public static int select(int[] a, int w){
         if (a.length <= 5) {
@@ -94,7 +94,7 @@ public class BFPRP {
 //        return j;
     }
 
-    public static void insertSort2(int[] arr) {
+    private static void insertSort2(int[] arr) {
         int t, i, j;
         for (i = 0; i < arr.length; i++) {
             t = arr[i];

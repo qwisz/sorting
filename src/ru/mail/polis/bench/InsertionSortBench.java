@@ -31,7 +31,7 @@ public class InsertionSortBench {
 
     @Setup(value = Level.Invocation)
     public void setUpInvocation() {
-        a = Helper.genWorstInsertionSort(100000);
+        a = Helper.gen(1000);
         for (int i = 0; i < 10; i++) {
         }
     }

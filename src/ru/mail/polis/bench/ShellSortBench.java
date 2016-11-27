@@ -17,14 +17,14 @@ import java.util.concurrent.TimeUnit;
 
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.NANOSECONDS)
+@OutputTimeUnit(TimeUnit.MILLISECONDS)
 public class ShellSortBench {
 
     private int[] a;
 
     @Setup(value = Level.Invocation)
     public void setUpInvocation() {
-        a = Helper.gen(100000);
+        a = Helper.gen(1000000);
         for (int i = 0; i < 10; i++) {
         }
     }

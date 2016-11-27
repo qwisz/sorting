@@ -17,14 +17,14 @@ import java.util.concurrent.TimeUnit;
 
 @State(Scope.Thread)
 @BenchmarkMode(Mode.AverageTime)
-@OutputTimeUnit(TimeUnit.NANOSECONDS)
+@OutputTimeUnit(TimeUnit.MICROSECONDS)
 public class QuickSortRandomBench {
 
     private int[] a;
 
     @Setup(value = Level.Invocation)
     public void setUpInvocation() {
-        a = Helper.gen(100000);
+        a = Helper.genBestInsertionSort(1000);
         for (int i = 0; i < 10; i++) {
         }
     }

@@ -25,6 +25,27 @@ public class Helper {
         return a;
     }
 
+    public static int[] genWorstQuickSort(int n){
+        int[] res = genBestInsertionSort(n);
+        for (int i = 0; i < n; i++) {
+            swap(res, i, i / 2);
+        }
+        return res;
+    }
+
+    public static int[] genTest(int n) {
+        Random r = new Random();
+        int[] a = new int[n];
+        for (int i = 0; i < a.length; i++) {
+            a[i] = r.nextInt(2);
+        }
+        for (int i = a.length - 1; i > 0; i--) {
+            int j = r.nextInt(i + 1);
+            Helper.swap(a, i, j);
+        }
+        return a;
+    }
+
     public static int[] genWorstInsertionSort(int n){
         int[] a = new int[n];
         for (int i = 0; i < n; i++) {
